@@ -17,9 +17,10 @@ html, body{
     position: relative;
     width: 80px;
     height: 30px;
+    line-height: 30px;
     left: 20px;
     margin-bottom: 8px;
-    border-radius: 0px;
+    border-radius: 1px;
     cursor: pointer;
     outline: none;
     border: solid;
@@ -28,6 +29,7 @@ html, body{
     top: 75%;
     left: 50%;
     margin-left: -40px;
+    letter-spacing: 1px;
 }
 
 #intro-des {
@@ -38,8 +40,6 @@ html, body{
     margin-top: -250px;
     left: 50%;
     top: 50%;
-    border: solid;
-    border-width: 1px;
 }
 
 .section {
@@ -57,10 +57,9 @@ html, body{
 
 .buttons {
     position: fixed;
-    top: 50%;
     left:50%;
-    margin-left: -400px;
-    margin-top: -25px;
+    margin-left: -410px;
+    margin-top: 39px;
     height: 50px;
     width: 100px;
 }
@@ -70,15 +69,24 @@ html, body{
     width: 60px;  
     left: 20px;
     margin-bottom: 8px;
-    border-radius: 0px;
     cursor: pointer;
-    outline: none;
+    border: solid;
+    border-width: 1px;
+    text-align: center;
+    border-radius: 1px;
+    padding: 5px;
+    letter-spacing: 1px;
+    -webkit-user-select: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
+    user-select: none; 
 }
 
 #exx {
     position: relative;
-    height: 50px;
-    width: 50px;
+    height: 30px;
+    width: 30px;
     left:100%;
-    margin-left: -50px;
+    margin-left: -30px;
+    cursor: pointer;
 }

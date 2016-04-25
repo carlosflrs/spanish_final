@@ -6,8 +6,16 @@ var names = [];
 var texts = [];
 
 function main() {
-    $("#start").click(function() {$(".intro").hide();});
-    $("#line").click(function() {addText()});
+    $("#start").click(function() {});
+    $("#start").click(function() {
+        $(".intro").animate({
+            opacity: 0
+        }, 600, function(){
+            $(".intro").hide();
+        });
+    });
+    $("#adelante").click(function() {addText()});
+    $("#atras").click(function() {removeText()});
     $("#clear").click(function() {clear()});
     $("#exx").click(function(x) {$("#ex").hide(); $(".buttons").show();});
     $("#ex").hide();
@@ -26,7 +34,7 @@ function addText() {
     }
     if (index < names.length) {
         ran = getRandomInt(0, 2);
-        ran1 = getRandomInt(0, 5);
+        ran1 = getRandomInt(0, 6);
         var obj = {name: names[index], text:texts[index]}
         if (ran == 0 && index != 0 && index != 1) {
             addRandomObject(obj);
@@ -35,7 +43,7 @@ function addText() {
             startTop += 40;
         }
         index += 1
-        if (ran1 == 0) {
+        if (ran1 == )0 {
             distract();
         }
     }
@@ -43,6 +51,15 @@ function addText() {
         index = 0;
     }
     
+}
+
+function removeText() {
+    if (index >= 1) {
+        index = index - 1;
+        divName = names[index];
+        $("#" + divName).remove();
+        startTop -= 40;
+    }
 }
 
 function addObject(obj) {
@@ -75,11 +92,9 @@ function clear() {
 }
 
 function distract() {
-    console.log("here");
     colors = ["rgba(64, 153, 255, 0.7)", "rgba(59, 89, 152, 0.7)", "rgba(187, 0, 0, 0.7)", "rgba(18, 86, 136, 0.7)", "rgba(77, 194, 71, 0.7)", "rgba(255, 252, 0, 0.7)", "rgba(0, 191, 143, 0.7)"];
     ran = getRandomInt(0, 6);
     c = colors[ran];
-    console.log(c);
     $("#ex").css({"background-color":c});
     $("#ex").show();
     $(".buttons").hide();
